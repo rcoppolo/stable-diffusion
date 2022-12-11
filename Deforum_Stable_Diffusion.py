@@ -61,7 +61,7 @@ models_path = "/content/models" #@param {type:"string"}
 output_path = "/content/output" #@param {type:"string"}
 
 #@markdown **Google Drive Path Variables (Optional)**
-mount_google_drive = True #@param {type:"boolean"}
+mount_google_drive = False #@param {type:"boolean"}
 force_remount = False
 
 if mount_google_drive:
@@ -104,7 +104,7 @@ if setup_environment:
         ['git', 'clone', 'https://github.com/deforum/stable-diffusion'],
         ['pip', 'install', '-e', 'git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers'],
         ['pip', 'install', '-e', 'git+https://github.com/openai/CLIP.git@main#egg=clip'],
-        ['pip', 'install', 'accelerate', 'ftfy', 'jsonmerge', 'matplotlib', 'resize-right', 'timm', 'torchdiffeq'],
+        ['pip', 'install', 'opencv-python', 'pandas', 'scikit-image', 'numexpr', 'accelerate', 'ftfy', 'jsonmerge', 'matplotlib', 'resize-right', 'timm', 'torchdiffeq'],
         ['git', 'clone', 'https://github.com/shariqfarooq123/AdaBins.git'],
         ['git', 'clone', 'https://github.com/isl-org/MiDaS.git'],
         ['git', 'clone', 'https://github.com/MSFTserver/pytorch3d-lite.git'],
